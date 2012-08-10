@@ -1,4 +1,4 @@
-README.rst
+rst2twiki
 #################################
 
 :slug: README.rst
@@ -7,8 +7,9 @@ README.rst
 :tags: all, 
 :category: misc
 :author: ning
-:Last modified: 2012-08-11 01:42:40
+:Last modified: 2012-08-11 01:47:31
 
 .. contents:: Table of Contents
 
-readme.rst
+a tool convert docs from rst to twiki
+
