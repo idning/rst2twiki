@@ -7,7 +7,7 @@ __VERSION__ = "0.1"
 
 requires=[]
 
-scripts = ['rst2twiki.py', ]
+scripts = ['rst2twiki.py', 'rst2wiki.py', ]
 
 setup(
     name = "rst2twiki",
