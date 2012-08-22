@@ -38,7 +38,7 @@ class WikiVisitor(GenericNodeVisitor):
         @wraps(f)
         def wrapper(*args, **kwds):
             node = args[1]
-            print >> sys.stderr, 'x'*50, 'Calling %s' % (f.__name__), '\n', node
+            #print >> sys.stderr, 'x'*50, 'Calling %s' % (f.__name__), '\n', node
             return f(*args, **kwds)
         return wrapper
 

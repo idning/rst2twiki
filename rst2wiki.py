@@ -8,6 +8,7 @@ from docutils.writers import Writer
 from docutils.core import publish_string
 from docutils.core import publish_cmdline
 from functools import wraps
+import re
 
 class WikiWriter(Writer):
     def translate(self):
@@ -35,7 +36,7 @@ class WikiVisitor(GenericNodeVisitor):
         @wraps(f)
         def wrapper(*args, **kwds):
             node = args[1]
-            print >> sys.stderr, 'x'*50, 'Calling %s' % (f.__name__), '\n', node
+            #print >> sys.stderr, 'x'*50, 'Calling %s' % (f.__name__), '\n', node
             return f(*args, **kwds)
         return wrapper
 
@@ -52,7 +53,7 @@ class WikiVisitor(GenericNodeVisitor):
             data = data.replace('\r', '')
             data = data.replace('\n', ' ')
         if self.in_title:
-            data = data.replace('^[0-9\.]+', '', data)
+            data = re.sub('[0-9\.]+', '', data)
         self.output.append(data)
     
     @log_decorator
